@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mainviewmodel"
+            type="com.example.modernfoodrecipe.data.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.Mainactivity.fragments.FoodJoke.Food_joke">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:background="@drawable/imagefoodjoke"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            readdatabasefk="@{mainviewmodel.getfoodjoke}"
+            readapiresponsefk="@{mainviewmodel.foodJokeresponse}"
+            style="?android:attr/progressBarStyle"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/food_joke_imgview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:alpha="0.5"
+            readDatabase4="@{mainviewmodel.getfoodjoke}"
+            readApiResponse4="@{mainviewmodel.foodJokeresponse}"
+            android:src="@drawable/pngwing"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            readdatabasefk="@{mainviewmodel.getfoodjoke}"
+            readapiresponsefk="@{mainviewmodel.foodJokeresponse}"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/food_joke_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/courgette"
+                android:gravity="center"
+                android:lineSpacingExtra="5sp"
+                android:padding="6dp"
+                android:scrollbars="vertical"
+                android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s_when_an_unknown_printer_took_a_galley_of_type_and_scrambled_it_to_make_a_type_specimen_book_it_has_survived_not_only_five_centuries_but_also_the_leap_into_electronic_typesetting_remaining_essentially_unchanged_it_was_popularised_in_the_1960s_with_the_release_of_letraset_sheets_containing_lorem_ipsum_passages_and_more_recently_with_desktop_publishing_software_like_aldus_pagemaker_including_versions_of_lorem_ipsum"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/food_joke_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/courgette"
+            android:gravity="center"
+            readDatabase4="@{mainviewmodel.getfoodjoke}"
+            readApiResponse4="@{mainviewmodel.foodJokeresponse}"
+            android:text="No internet connection"
+            android:textColor="@color/darkGray"
+            android:textSize="25sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/food_joke_imgview"
+            app:layout_constraintStart_toStartOf="@+id/food_joke_imgview"
+            app:layout_constraintTop_toBottomOf="@+id/food_joke_imgview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

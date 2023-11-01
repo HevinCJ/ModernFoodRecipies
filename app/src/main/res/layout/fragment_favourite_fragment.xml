@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mainviewmodel"
+            type="com.example.modernfoodrecipe.data.MainViewModel" />
+
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dp"
+        tools:context=".ui.Mainactivity.fragments.Favourite.Favourite_fragment">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favrc_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/imgviewnofavourites"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            viewVisiblity="@{mainviewmodel.readfavouriterecipes}"
+            android:alpha="0.3"
+            android:src="@drawable/baseline_menu_book_24"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/textviewnofavourites"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            viewVisiblity="@{mainviewmodel.readfavouriterecipes}"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkGray"
+            android:visibility="invisible"
+            android:fontFamily="@font/courgette"
+            android:layout_marginTop="16dp"
+            android:text="@string/no_favourites_added"
+            app:layout_constraintEnd_toEndOf="@+id/imgviewnofavourites"
+            app:layout_constraintStart_toStartOf="@+id/imgviewnofavourites"
+            app:layout_constraintTop_toBottomOf="@+id/imgviewnofavourites" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
