@@ -19,7 +19,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 @ActivityRetainedScoped
-class DataStoreRepository @Inject constructor(@ApplicationContext private val context: Context) {
+class  DataStoreRepository @Inject constructor(@ApplicationContext private val context: Context) {
 
 
     private object preferenceKeys{

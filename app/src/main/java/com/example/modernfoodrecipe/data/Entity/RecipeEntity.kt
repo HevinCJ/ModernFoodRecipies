@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.example.modernfoodrecipe.models.FoodRecipes
 
 @Entity(tableName = "Recipe_table")
-class RecipeEntity(
+data class RecipeEntity(
     val foodRecipes: FoodRecipes
 ) {
     @PrimaryKey(autoGenerate = false)
