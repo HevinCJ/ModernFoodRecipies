@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.Mainactivity.fragments.Recipes
+package com.example.modernfoodrecipe.ui.fragments.Recipes
 
 import android.os.Bundle
 import android.util.Log
@@ -24,11 +24,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import coil.Coil
 import com.example.modernfoodrecipe.Adapter.RecipesAdapter
 import com.example.modernfoodrecipe.R
-import com.example.modernfoodrecipe.data.MainViewModel
-import com.example.modernfoodrecipe.data.NetworkResult
-import com.example.modernfoodrecipe.data.Repository.RecipeViewModel
+import com.example.modernfoodrecipe.viewmodels.MainViewModel
+import com.example.modernfoodrecipe.utils.NetworkResult
+import com.example.modernfoodrecipe.viewmodels.RecipeViewModel
 import com.example.modernfoodrecipe.databinding.FragmentRecipeFragmentBinding
-import com.example.modernfoodrecipe.ui.ObserveOnce
+import com.example.modernfoodrecipe.utils.ObserveOnce
 import com.example.modernfoodrecipe.utils.NetworkListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -44,7 +44,7 @@ class Recipe_fragment : Fragment(), SearchView.OnQueryTextListener {
     private val args by navArgs<Recipe_fragmentArgs>()
 
 
-    private lateinit var mainViewModel:MainViewModel
+    private lateinit var mainViewModel: MainViewModel
     private lateinit var recipeViewModel: RecipeViewModel
 
     private lateinit var networkListener: NetworkListener
@@ -76,7 +76,7 @@ class Recipe_fragment : Fragment(), SearchView.OnQueryTextListener {
         lifecycleScope.launch {
             networkListener=NetworkListener()
             networkListener.checkConnectionAvailability(requireContext())
-                .collect{status->
+                networkListener.checkConnectionAvailability(requireContext()).collect{status->
                     Log.d("NetworkListener", status.toString())
                     recipeViewModel.networkstatus=status
                     recipeViewModel.shownetworkstatus()
@@ -189,6 +189,9 @@ class Recipe_fragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextChange(p0: String?): Boolean {
+        if (p0!=null) {
+            searchrecipies(p0)
+        }
         return true
     }
 

@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.Mainactivity.fragments
+package com.example.modernfoodrecipe.ui.fragments.Recipes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
-import com.example.modernfoodrecipe.data.Repository.RecipeViewModel
+import com.example.modernfoodrecipe.viewmodels.RecipeViewModel
 import com.example.modernfoodrecipe.databinding.BottomSheetFragmentBinding
 import com.example.modernfoodrecipe.utils.Constants.Companion.DEFAULT_DIET_TYPE
 import com.example.modernfoodrecipe.utils.Constants.Companion.DEFAULT_MEAL_TYPE

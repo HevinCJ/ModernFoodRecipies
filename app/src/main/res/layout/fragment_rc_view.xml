@@ -6,7 +6,7 @@
     <data>
         <variable
             name="favouriteEntity"
-            type="com.example.modernfoodrecipe.data.FavouriteEntity" />
+            type="com.example.modernfoodrecipe.data.Entity.FavouriteEntity" />
 
     </data>
 

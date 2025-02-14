@@ -13,12 +13,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.navArgs
 import com.example.modernfoodrecipe.R
-import com.example.modernfoodrecipe.data.FavouriteEntity
-import com.example.modernfoodrecipe.data.MainViewModel
+import com.example.modernfoodrecipe.data.Entity.FavouriteEntity
+import com.example.modernfoodrecipe.viewmodels.MainViewModel
 import com.example.modernfoodrecipe.databinding.ActivityDetailsBinding
-import com.example.modernfoodrecipe.ui.DetailsActivity.fragments.Ingredientfragment
-import com.example.modernfoodrecipe.ui.DetailsActivity.fragments.InstructionFragment
-import com.example.modernfoodrecipe.ui.DetailsActivity.fragments.overviewfragment
+import com.example.modernfoodrecipe.ui.fragments.Ingredients.Ingredientfragment
+import com.example.modernfoodrecipe.ui.fragments.Ingredients.InstructionFragment
+import com.example.modernfoodrecipe.ui.fragments.Ingredients.overviewfragment
+import com.example.modernfoodrecipe.viewmodels.DetailsViewmodel
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,7 +38,7 @@ class DetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
     private val args by navArgs<DetailsActivityArgs>()
 
-    private val mainViewModel:MainViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

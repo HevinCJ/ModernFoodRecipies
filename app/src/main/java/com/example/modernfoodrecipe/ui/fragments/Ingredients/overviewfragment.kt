@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.DetailsActivity.fragments
+package com.example.modernfoodrecipe.ui.fragments.Ingredients
 
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.example.modernfoodrecipe.R
 import com.example.modernfoodrecipe.databinding.FragmentOverviewfragmentBinding
-import com.example.modernfoodrecipe.ui.DetailsActivity.DetailsViewmodel
+import com.example.modernfoodrecipe.viewmodels.DetailsViewmodel
 import org.jsoup.Jsoup
 
 

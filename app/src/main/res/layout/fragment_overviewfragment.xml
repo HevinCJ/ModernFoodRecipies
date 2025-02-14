@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:padding="3dp"
     app:layoutDescription="@xml/fragment_overviewfragment_scene"
-    tools:context=".ui.DetailsActivity.fragments.overviewfragment">
+    tools:context=".ui.fragments.Ingredients.overviewfragment">
 
 
     <ImageView

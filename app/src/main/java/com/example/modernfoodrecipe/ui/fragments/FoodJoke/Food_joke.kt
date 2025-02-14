@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.Mainactivity.fragments.FoodJoke
+package com.example.modernfoodrecipe.ui.fragments.FoodJoke
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import com.example.modernfoodrecipe.R
-import com.example.modernfoodrecipe.data.MainViewModel
-import com.example.modernfoodrecipe.data.NetworkResult
+import com.example.modernfoodrecipe.viewmodels.MainViewModel
+import com.example.modernfoodrecipe.utils.NetworkResult
 import com.example.modernfoodrecipe.databinding.FragmentFoodJokeBinding
 import com.example.modernfoodrecipe.utils.Constants.Companion.API_KEY
 import dagger.hilt.android.AndroidEntryPoint

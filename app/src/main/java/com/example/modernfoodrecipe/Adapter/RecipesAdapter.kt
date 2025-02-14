@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.modernfoodrecipe.RecepiesDiffUtil
+import com.example.modernfoodrecipe.ui.fragments.Recipes.RecepiesDiffUtil
 import com.example.modernfoodrecipe.databinding.RecipeRcViewBinding
 import com.example.modernfoodrecipe.models.FoodRecipes
 import com.example.modernfoodrecipe.models.ResultX

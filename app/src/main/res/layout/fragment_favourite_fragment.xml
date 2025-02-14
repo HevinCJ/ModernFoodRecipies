@@ -6,7 +6,7 @@
     <data>
         <variable
             name="mainviewmodel"
-            type="com.example.modernfoodrecipe.data.MainViewModel" />
+            type="com.example.modernfoodrecipe.viewmodels.MainViewModel" />
 
 
     </data>
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="3dp"
-        tools:context=".ui.Mainactivity.fragments.Favourite.Favourite_fragment">
+        tools:context=".ui.fragments.Favourite.Favourite_fragment">
 
 
         <androidx.recyclerview.widget.RecyclerView

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="mainviewmodel"
-            type="com.example.modernfoodrecipe.data.MainViewModel" />
+            type="com.example.modernfoodrecipe.viewmodels.MainViewModel" />
 
     </data>
 
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:background="@color/lightGray"
-        tools:context=".ui.Mainactivity.fragments.Recipes.Recipe_fragment">
+        tools:context=".ui.fragments.Recipes.Recipe_fragment">
 
         <ImageView
             android:id="@+id/imageView"

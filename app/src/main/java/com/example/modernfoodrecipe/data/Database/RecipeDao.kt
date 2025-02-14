@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.modernfoodrecipe.data.Entity.FoodJokeEntity
 import com.example.modernfoodrecipe.data.Entity.RecipeEntity
-import com.example.modernfoodrecipe.data.FavouriteEntity
+import com.example.modernfoodrecipe.data.Entity.FavouriteEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -28,7 +28,7 @@ interface RecipeDao {
       fun readFavouriteRecipe():Flow<List<FavouriteEntity>>
 
      @Delete
-     suspend fun deletefavouriterecipe(favouriteEntity:FavouriteEntity)
+     suspend fun deletefavouriterecipe(favouriteEntity: FavouriteEntity)
 
      @Query("DELETE FROM FAVOURITES_TABLE")
      suspend fun deleteAll()

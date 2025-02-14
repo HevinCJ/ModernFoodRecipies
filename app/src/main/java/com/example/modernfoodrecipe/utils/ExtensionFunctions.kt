@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui
+package com.example.modernfoodrecipe.utils
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

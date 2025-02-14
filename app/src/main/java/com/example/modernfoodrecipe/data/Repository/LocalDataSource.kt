@@ -1,6 +1,7 @@
-package com.example.modernfoodrecipe.data
+package com.example.modernfoodrecipe.data.Repository
 
 import com.example.modernfoodrecipe.data.Database.RecipeDao
+import com.example.modernfoodrecipe.data.Entity.FavouriteEntity
 import com.example.modernfoodrecipe.data.Entity.FoodJokeEntity
 import com.example.modernfoodrecipe.data.Entity.RecipeEntity
 import kotlinx.coroutines.flow.Flow
@@ -16,7 +17,7 @@ class LocalDataSource @Inject constructor(private val recipeDao: RecipeDao) {
 
     suspend fun insertFavouriteRecipes(favouriteEntity: FavouriteEntity) = recipeDao.insertFavourite(favouriteEntity)
 
-    suspend fun deleteFavouriteRecipes(favouriteEntity:FavouriteEntity) =recipeDao.deletefavouriterecipe(favouriteEntity)
+    suspend fun deleteFavouriteRecipes(favouriteEntity: FavouriteEntity) =recipeDao.deletefavouriterecipe(favouriteEntity)
 
     suspend fun deleteall() = recipeDao.deleteAll()
 

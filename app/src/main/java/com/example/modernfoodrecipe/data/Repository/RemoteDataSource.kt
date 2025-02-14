@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.data
+package com.example.modernfoodrecipe.data.Repository
 
 import com.example.modernfoodrecipe.data.Network.FoodRecepiesApi
 import com.example.modernfoodrecipe.models.FoodJoke

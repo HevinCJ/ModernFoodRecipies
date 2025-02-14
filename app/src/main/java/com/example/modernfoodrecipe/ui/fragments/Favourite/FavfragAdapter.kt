@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui
+package com.example.modernfoodrecipe.ui.fragments.Favourite
 
 import android.view.ActionMode
 import android.view.LayoutInflater
@@ -12,11 +12,10 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.modernfoodrecipe.R
-import com.example.modernfoodrecipe.RecepiesDiffUtil
-import com.example.modernfoodrecipe.data.FavouriteEntity
-import com.example.modernfoodrecipe.data.MainViewModel
+import com.example.modernfoodrecipe.ui.fragments.Recipes.RecepiesDiffUtil
+import com.example.modernfoodrecipe.data.Entity.FavouriteEntity
+import com.example.modernfoodrecipe.viewmodels.MainViewModel
 import com.example.modernfoodrecipe.databinding.FragmentRcViewBinding
-import com.example.modernfoodrecipe.ui.Mainactivity.fragments.Favourite.Favourite_fragmentDirections
 import com.google.android.material.snackbar.Snackbar
 
 class FavfragAdapter(private val requireactivity:FragmentActivity, private val mainViewModel: MainViewModel): RecyclerView.Adapter<FavfragAdapter.myViewHolder>(),ActionMode.Callback {
@@ -136,14 +135,14 @@ class FavfragAdapter(private val requireactivity:FragmentActivity, private val m
         favourites = data
     }
 
-    private fun changeFavouriteBackgroundStyle(holder: myViewHolder,backgroundcolor:Int,strokecolor:Int){
+    private fun changeFavouriteBackgroundStyle(holder: myViewHolder, backgroundcolor:Int, strokecolor:Int){
         with(holder){
             binding.favouriteRcLayout.setBackgroundColor(ContextCompat.getColor(requireactivity,backgroundcolor))
             binding.cardviewFavourite.strokeColor = ContextCompat.getColor(requireactivity,strokecolor)
         }
     }
 
-    private fun applySelection(holder: myViewHolder,currentitem: FavouriteEntity){
+    private fun applySelection(holder: myViewHolder, currentitem: FavouriteEntity){
         if (selectedRecipes.contains(currentitem)){
             selectedRecipes.remove(currentitem)
             changeFavouriteBackgroundStyle(holder,R.color.white,R.color.mediumGray)

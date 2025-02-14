@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.data
+package com.example.modernfoodrecipe.DataStore
 
 import android.content.Context
 import androidx.datastore.core.DataStore

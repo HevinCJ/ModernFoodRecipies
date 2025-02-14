@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.DetailsActivity
+package com.example.modernfoodrecipe.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

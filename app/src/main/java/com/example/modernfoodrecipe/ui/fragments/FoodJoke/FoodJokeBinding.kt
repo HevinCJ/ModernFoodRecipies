@@ -1,11 +1,11 @@
-package com.example.modernfoodrecipe.ui.Mainactivity.fragments.FoodJoke
+package com.example.modernfoodrecipe.ui.fragments.FoodJoke
 
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.modernfoodrecipe.data.Entity.FoodJokeEntity
-import com.example.modernfoodrecipe.data.NetworkResult
+import com.example.modernfoodrecipe.utils.NetworkResult
 import com.example.modernfoodrecipe.models.FoodJoke
 import com.google.android.material.card.MaterialCardView
 
@@ -15,7 +15,7 @@ class FoodJokeBinding {
 
         @BindingAdapter("readapiresponsefk","readdatabasefk", requireAll = true)
         @JvmStatic
-        fun setCardViewAndProgressBarVisibility(view:View,apiresponse:NetworkResult<FoodJoke>?,database:List<FoodJokeEntity>?) {
+        fun setCardViewAndProgressBarVisibility(view:View, apiresponse: NetworkResult<FoodJoke>?, database:List<FoodJokeEntity>?) {
             when(apiresponse){
 
                 is NetworkResult.Loading ->{

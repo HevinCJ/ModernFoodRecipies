@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.DetailsActivity.fragments
+package com.example.modernfoodrecipe.ui.fragments.Ingredients
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.modernfoodrecipe.databinding.FragmentInstructionBinding
-import com.example.modernfoodrecipe.ui.DetailsActivity.DetailsViewmodel
+import com.example.modernfoodrecipe.viewmodels.DetailsViewmodel
 
 
 class InstructionFragment : Fragment() {

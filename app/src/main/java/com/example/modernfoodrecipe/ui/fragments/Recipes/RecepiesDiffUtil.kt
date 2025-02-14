@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe
+package com.example.modernfoodrecipe.ui.fragments.Recipes
 
 import androidx.recyclerview.widget.DiffUtil
 

@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.Mainactivity.fragments.Favourite
+package com.example.modernfoodrecipe.ui.fragments.Favourite
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,9 +14,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.modernfoodrecipe.R
-import com.example.modernfoodrecipe.data.MainViewModel
+import com.example.modernfoodrecipe.viewmodels.MainViewModel
 import com.example.modernfoodrecipe.databinding.FragmentFavouriteFragmentBinding
-import com.example.modernfoodrecipe.ui.FavfragAdapter
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,7 +24,7 @@ class Favourite_fragment : Fragment() {
     private var favfrag:FragmentFavouriteFragmentBinding?=null
     private val binding get() = favfrag!!
 
-    private val viewmodel:MainViewModel by viewModels()
+    private val viewmodel: MainViewModel by viewModels()
     private val adapter: FavfragAdapter by lazy { FavfragAdapter(requireActivity(),viewmodel) }
 
     override fun onCreateView(

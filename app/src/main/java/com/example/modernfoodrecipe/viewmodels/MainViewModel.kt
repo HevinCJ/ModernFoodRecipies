@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.data
+package com.example.modernfoodrecipe.viewmodels
 
 import android.app.Application
 import android.content.Context
@@ -11,6 +11,8 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.modernfoodrecipe.data.Entity.FoodJokeEntity
 import com.example.modernfoodrecipe.data.Entity.RecipeEntity
+import com.example.modernfoodrecipe.data.Entity.FavouriteEntity
+import com.example.modernfoodrecipe.utils.NetworkResult
 import com.example.modernfoodrecipe.data.Repository.Repository
 import com.example.modernfoodrecipe.models.FoodJoke
 import com.example.modernfoodrecipe.models.FoodRecipes
@@ -76,18 +78,18 @@ class MainViewModel  @Inject constructor (application: Application,private val r
 
 
     private suspend fun searchrecipiessafecall(queries: Map<String, String>) {
-        searchreciperesponse.value=NetworkResult.Loading()
         if (isNetworkAvailable()){
             try {
+                searchreciperesponse.value= NetworkResult.Loading()
                 val response = repository.remote.searchRecipies(queries)
                     searchreciperesponse.value = handleFoodResponseApi(response)
 
             }catch (e:Exception){
-                searchreciperesponse.value=NetworkResult.Error("Recipies not found")
+                searchreciperesponse.value= NetworkResult.Error("Recipies not found")
             }
 
         }else{
-            searchreciperesponse.value=NetworkResult.Error(message = "No Internet connection")
+            searchreciperesponse.value= NetworkResult.Error(message = "No Internet connection")
         }
     }
 
@@ -95,9 +97,9 @@ class MainViewModel  @Inject constructor (application: Application,private val r
 
 
     private suspend fun getrecipiessafecall(queries: Map<String, String>) {
-        reciperesponse.value=NetworkResult.Loading()
         if (isNetworkAvailable()){
        try {
+           reciperesponse.value= NetworkResult.Loading()
         val response = repository.remote.getrecepies(queries)
         reciperesponse.value = handleFoodResponseApi(response)
 
@@ -107,11 +109,11 @@ class MainViewModel  @Inject constructor (application: Application,private val r
            }
 
         }catch (e:Exception){
-            reciperesponse.value=NetworkResult.Error("Recipies not found")
+            reciperesponse.value= NetworkResult.Error("Recipies not found")
         }
 
         }else{
-            reciperesponse.value=NetworkResult.Error(message = "No Internet connection")
+            reciperesponse.value= NetworkResult.Error(message = "No Internet connection")
         }
 
     }
@@ -131,12 +133,12 @@ class MainViewModel  @Inject constructor (application: Application,private val r
                 val foodrecipes = response.body()
                 NetworkResult.Success(foodrecipes!!)
             }
-            else -> return NetworkResult.Error( response.message())
+            else -> return NetworkResult.Error(response.message())
         }
     }
 
     private suspend fun getFoodJokesafecall(apiKey: String) {
-        foodJokeresponse.value=NetworkResult.Loading()
+        foodJokeresponse.value= NetworkResult.Loading()
         if (isNetworkAvailable()){
             try {
                 val response = repository.remote.getFoodJoke(apiKey)
@@ -149,11 +151,11 @@ class MainViewModel  @Inject constructor (application: Application,private val r
                 }
 
             }catch (e:Exception){
-                foodJokeresponse.value=NetworkResult.Error("Recipies not found")
+                foodJokeresponse.value= NetworkResult.Error("Recipies not found")
             }
 
         }else{
-            foodJokeresponse.value=NetworkResult.Error(message = "No Internet connection")
+            foodJokeresponse.value= NetworkResult.Error(message = "No Internet connection")
         }
     }
 
@@ -170,7 +172,7 @@ class MainViewModel  @Inject constructor (application: Application,private val r
                 val foodrecipes = response.body()
                 NetworkResult.Success(foodrecipes!!)
             }
-            else -> return NetworkResult.Error( response.message())
+            else -> return NetworkResult.Error(response.message())
         }
     }
 

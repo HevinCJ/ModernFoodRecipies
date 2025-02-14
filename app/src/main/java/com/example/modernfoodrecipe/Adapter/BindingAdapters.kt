@@ -11,7 +11,8 @@ import coil.load
 import coil.request.CachePolicy
 import com.example.modernfoodrecipe.R
 import com.example.modernfoodrecipe.models.ResultX
-import com.example.modernfoodrecipe.ui.Mainactivity.fragments.Recipes.Recipe_fragmentDirections
+import com.example.modernfoodrecipe.ui.fragments.Recipes.Recipe_fragmentDirections
+
 import org.jsoup.Jsoup
 
 

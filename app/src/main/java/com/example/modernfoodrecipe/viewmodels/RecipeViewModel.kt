@@ -1,10 +1,10 @@
-package com.example.modernfoodrecipe.data.Repository
+package com.example.modernfoodrecipe.viewmodels
 
 import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.modernfoodrecipe.data.DataStoreRepository
+import com.example.modernfoodrecipe.DataStore.DataStoreRepository
 import com.example.modernfoodrecipe.utils.Constants.Companion.API_KEY
 import com.example.modernfoodrecipe.utils.Constants.Companion.DEFAULT_DIET_TYPE
 import com.example.modernfoodrecipe.utils.Constants.Companion.DEFAULT_MEAL_TYPE

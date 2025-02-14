@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.DetailsActivity.fragments
+package com.example.modernfoodrecipe.ui.fragments.Ingredients
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.modernfoodrecipe.databinding.FragmentIngredientfragmentBinding
-import com.example.modernfoodrecipe.ui.DetailsActivity.DetailsViewmodel
+import com.example.modernfoodrecipe.viewmodels.DetailsViewmodel
 import kotlinx.coroutines.launch
 
 
@@ -19,7 +19,7 @@ class Ingredientfragment : Fragment() {
     private val binding get() = ingfrag!!
 
     private val adapter by lazy { IngfragAdapter() }
-    private lateinit var viemodel:DetailsViewmodel
+    private lateinit var viemodel: DetailsViewmodel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

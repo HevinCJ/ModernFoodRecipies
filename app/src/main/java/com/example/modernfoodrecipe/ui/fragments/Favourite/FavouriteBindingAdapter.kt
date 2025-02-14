@@ -1,10 +1,10 @@
-package com.example.modernfoodrecipe.ui.Mainactivity.fragments.Favourite
+package com.example.modernfoodrecipe.ui.fragments.Favourite
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.example.modernfoodrecipe.data.FavouriteEntity
+import com.example.modernfoodrecipe.data.Entity.FavouriteEntity
 
 class FavouriteBindingAdapter {
 

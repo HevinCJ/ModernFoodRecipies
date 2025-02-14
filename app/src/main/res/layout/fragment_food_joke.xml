@@ -6,14 +6,14 @@
     <data>
         <variable
             name="mainviewmodel"
-            type="com.example.modernfoodrecipe.data.MainViewModel" />
+            type="com.example.modernfoodrecipe.viewmodels.MainViewModel" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.Mainactivity.fragments.FoodJoke.Food_joke">
+        tools:context=".ui.fragments.FoodJoke.Food_joke">
 
         <ImageView
             android:id="@+id/imageView3"

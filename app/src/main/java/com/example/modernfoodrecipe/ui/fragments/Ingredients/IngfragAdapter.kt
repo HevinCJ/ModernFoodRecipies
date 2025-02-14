@@ -1,4 +1,4 @@
-package com.example.modernfoodrecipe.ui.DetailsActivity.fragments
+package com.example.modernfoodrecipe.ui.fragments.Ingredients
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.modernfoodrecipe.RecepiesDiffUtil
+import com.example.modernfoodrecipe.ui.fragments.Recipes.RecepiesDiffUtil
 import com.example.modernfoodrecipe.databinding.IngredientRowLayoutBinding
 import com.example.modernfoodrecipe.models.ExtendedIngredient
 import com.example.modernfoodrecipe.utils.Constants.Companion.BASE_IMAGE_URL
